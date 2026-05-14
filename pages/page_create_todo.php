@@ -2,7 +2,7 @@
     <h1 class="font-bold text-xl text-slate-800">Create New Todo</h1>
     <form action="controllers/todo_controller.php?method=create" method="POST" class="flex flex-wrap mt-5">
         <div class="flex gap-2 p-1 flex-col w-1/2">
-            <label class="font-medium text-sm" for="name">Your Name</label>
+            <label class="font-medium text-sm" for="email">Your Name</label>
             <input type="text" name="name" id="name"
                 class="border border-slate-200 bg-slate-50 rounded py-1.5 px-2 outline-none"
                 placeholder="Input your name" />
