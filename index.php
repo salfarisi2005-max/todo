@@ -54,6 +54,9 @@ if (isset($_SESSION['status_login']) && $_SESSION['status_login']) {
                 if ($page_name == "create_todo") {
                     include("pages/page_create_todo.php");
                 }
+                if ($page_name == "create_user") {
+                    include("pages/page_create_user.php");
+                }
                 ?>
             </div>
         </div>
