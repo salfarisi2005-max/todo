@@ -21,7 +21,7 @@ function storeData($data, $db)
 {
     $count = $db->prepare("INSERT INTO list_todo (name, status, activity) VALUES (?, ?, ?)");
     $count->execute([$data['name'], $data['status'], $data['activity']]);
-    header("location:../index.php");
+    header("location:../index.php?page_name=todo");
 }
 
 ?>

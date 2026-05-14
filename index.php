@@ -34,28 +34,37 @@ if (isset($_SESSION['status_login']) && $_SESSION['status_login']) {
                     <li><a href="index.php"
                             class="hover:text-amber-200 <?php echo $page_name == 'dashboard' ? 'text-amber-300' : ''; ?>">Dashboard</a>
                     </li>
-                    <li><a href="index.php?page_name=create_todo"
-                            class="hover:text-amber-200 <?php echo $page_name == 'create_todo' ? 'text-amber-300' : ''; ?>">Create
-                            New
-                            Todo</a>
+                    <li><a href="index.php?page_name=todo"
+                            class="hover:text-amber-200 <?php echo $page_name == 'todo' ? 'text-amber-300' : ''; ?>">Todo</a>
                     </li>
-                    <li><a href="index.php?page_name=create_user"
-                            class="hover:text-amber-200 <?php echo $page_name == 'create_user' ? 'text-amber-300' : ''; ?>">Create
-                            user</a>
+                    <li><a href="index.php?page_name=user"
+                            class="hover:text-amber-200 <?php echo $page_name == 'user' ? 'text-amber-300' : ''; ?>">User</a>
                     </li>
                     <li><a href="proses_logout.php" class="hover:text-amber-200">Logout</a></li>
                 </ul>
             </div>
             <div class="flex flex-col p-5 flex-1 text-slate-800">
                 <?php
-                if ($page_name == "dashboard") {
-                    include("pages/page_dashboard.php");
-                }
-                if ($page_name == "create_todo") {
-                    include("pages/page_create_todo.php");
-                }
-                if ($page_name == "create_user") {
-                    include("pages/page_create_user.php");
+                switch ($page_name) {
+                    case 'dashboard':
+                        include("pages/page_dashboard.php");
+                        break;
+                    case 'todo':
+                        include("pages/page_todo.php");
+                        break;
+                    case 'user':
+                        include("pages/page_user.php");
+                        break;
+                    case 'create_todo':
+                        include("pages/page_create_todo.php");
+                        break;
+                    case 'create_user':
+                        include("pages/page_create_user.php");
+                        break;
+
+                    default:
+                        # code...
+                        break;
                 }
                 ?>
             </div>
