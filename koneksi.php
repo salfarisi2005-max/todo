@@ -2,7 +2,7 @@
 $host = "localhost";
 $db_name = "todo";
 $username = "root";
-$password = ""; // Kosongkan jika menggunakan XAMPP default
+$password = "root"; // Kosongkan jika menggunakan XAMPP default
 
 try {
     // 1. Inisialisasi koneksi PDO
